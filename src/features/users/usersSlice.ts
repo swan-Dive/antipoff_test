@@ -1,5 +1,4 @@
 import { createSlice} from "@reduxjs/toolkit"
-import { TUser } from "../../components/userCard/userType"
 import { getAllUsers, getUserByID } from "./userActions"
 
 const name = 'users'
@@ -40,7 +39,7 @@ const usersSlice = createSlice({name, initialState, reducers: {
 
 function createInitialState() {
   return {
-    data: null,
+    data: {data: [{avatar: "", email: "", first_name: "", id: 1, last_name: ""}], page: 1, per_page: 0, total: 0, total_pages: 0},
     current: null,
     error: "",
     loading: false
