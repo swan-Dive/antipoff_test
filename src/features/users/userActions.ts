@@ -16,6 +16,7 @@ export const getUserByID = createAsyncThunk(
   `user/getUserByID`, 
   async(id: number) => {
     const response = await axios.get(`${process.env.REACT_APP_API_URL}api/users/${id}`)
+    console.log(response.data)
     return response.data
   }
 )
